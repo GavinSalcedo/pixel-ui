@@ -1,0 +1,50 @@
+.button-base {
+    padding: 13px 12px;
+    border-radius: 10px;
+    width: Hug(67px);
+    height: Hug(40px);
+    font-size: 14px;
+    font-weight: 700;
+
+    &:disabled {
+        border: 1px solid transparent;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+}
+
+.primary {
+    @extend .button-base;
+
+    background-color: #106BEF;
+    border: 1px solid #0D59C7;
+    color: white;
+
+    &:hover {
+        box-shadow: 0px 0px 0px 4px rgba(0, 123, 255, 0.30), 0px 2px 3px 0px rgba(5, 36, 80, 0.30),
+            0px 1px 2px 0px #9BC1F8 inset;
+    }
+
+    &:active {
+        background: var(--primary-400, #3884F2);
+        box-shadow: 0px 2px 3px 0px rgba(5, 36, 80, 0.30), 0px 1px 2px 0px #9BC1F8 inset;
+    }
+}
+
+.secondary {
+    @extend .button-base;
+
+    background: var(--neutral-100, #FAFAFB);
+    border: 1px solid var(--neutral-300, #DFE2E4);
+    color: #333333;
+    box-shadow: 0px 2px 3px 0px rgba(41, 44, 49, 0.10), 0px 1px 2px 0px #FFF inset;
+
+    &:hover {
+        box-shadow: 0px 0px 0px 4px rgba(0, 123, 255, 0.30), 0px 2px 3px 0px rgba(41, 44, 49, 0.10),
+            0px 1px 2px 0px #FFF inset;
+    }
+
+    &:active {
+        background: #CCCCCC;
+    }
+}
