@@ -2,9 +2,23 @@
     display: flex;
     background-color: #fff;
 
+    &.sm .button {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+
+    &.md .button {
+        padding: 10px 20px;
+        font-size: 1rem; 
+    }
+
+    &.lg .button {
+        padding: 15px 30px;
+        font-size: 1.25rem; 
+    }
+
     .button {
         border: 1px solid #DFE2E4;
-        padding: 10px 20px;
         background-color: #FAFAFB;
         color: #333333;
         cursor: pointer;

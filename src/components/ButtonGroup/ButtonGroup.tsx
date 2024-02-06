@@ -8,11 +8,12 @@ interface ButtonGroupProps {
     isActive?: boolean;
   }>;
   onButtonClick: (id: number | string) => void;
+  size?: 'sm' | 'md' | 'lg';
 }
 
-const ButtonGroup: React.FC<ButtonGroupProps> = ({ buttons, onButtonClick }) => {
+const ButtonGroup: React.FC<ButtonGroupProps> = ({ buttons, onButtonClick, size = 'sm' }) => {
   return (
-    <div className="button-group">
+    <div className={`button-group ${size}`}>
       {buttons.map((button) => (
         <button
         key={button.id}
