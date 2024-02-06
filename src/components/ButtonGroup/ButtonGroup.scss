@@ -1,0 +1,36 @@
+.button-group {
+    display: flex;
+    background-color: #fff; // White background for the group
+    border-radius: 10px; // Rounded corners for the whole group
+
+    .button {
+        border: 1px solid #DFE2E4; // Light grey border for buttons
+        padding: 10px 20px; // Padding inside the buttons for top/bottom and left/right
+        background-color: #FAFAFB; // Default background for non-active buttons
+        color: #333333; // Default text color for non-active buttons
+        cursor: pointer; // Change cursor on hover
+        transition: background-color 0.3s, color 0.3s; // Smooth transition for hover and active states
+        outline: none; // Remove default focus outline
+
+        &:not(:first-child) {
+            border-left: none; // Remove left border for all but the first button
+        }
+
+        &.active {
+            background-color: #106BEF; // Active button background
+            color: #fff; // Active button text color
+            border-color: #106BEF; // Active button border color
+            z-index: 1; // Ensure active button overlaps adjacent buttons
+        }
+
+        &:hover:not(.active) {
+            background-color: #E3E4E6; // Hover background color for non-active buttons
+        }
+
+        &:disabled {
+            background-color: #ECECEC; // Disabled background color
+            color: #A1A1A1; // Disabled text color
+            cursor: not-allowed; // Change cursor for disabled state
+        }
+    }
+}
